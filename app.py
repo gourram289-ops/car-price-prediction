@@ -14,7 +14,7 @@ st.set_page_config(
 # ============================================
 # LOAD MODEL
 # ============================================
-MODEL_PATH = "best_car_price_model.pkl"
+MODEL_PATH = "model.pkl"
 
 @st.cache_resource
 def load_model():

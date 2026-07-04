@@ -19,11 +19,11 @@ FILE_PATH = "used_cars.csv"   # <- replace with your CSV file name if different
 
 df = pd.read_csv(FILE_PATH)
 
-print("Shape before cleaning:", df.shape)
-print("\nColumns:")
-print(df.columns.tolist())
-print("\nMissing values:")
-print(df.isnull().sum())
+# print("Shape before cleaning:", df.shape)
+# print("\nColumns:")
+# print(df.columns.tolist())
+# print("\nMissing values:")
+# print(df.isnull().sum())
 
 
 # =========================================================
@@ -132,7 +132,7 @@ q99 = df["price"].quantile(0.99)
 
 df = df[(df["price"] >= q1) & (df["price"] <= q99)]
 
-print("\nShape after cleaning + outlier removal:", df.shape)
+# print("\nShape after cleaning + outlier removal:", df.shape)
 
 
 # =========================================================
@@ -315,8 +315,8 @@ print("Best R2:", round(best_result["r2"], 4))
 # =========================================================
 # 22. SAVE BEST MODEL
 # =========================================================
-joblib.dump(best_model, "best_car_price_model.pkl")
-print("\nBest model saved as: best_car_price_model.pkl")
+joblib.dump(best_model, "model.pkl")
+print("\nBest model saved as: model.pkl")
 
 
 # =========================================================
