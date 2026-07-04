@@ -23,7 +23,6 @@ __pycache__/
 .env.*
 
 # Model & artifacts
-*.pkl
 *.joblib
 models/
 artifacts/
